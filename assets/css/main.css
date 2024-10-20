@@ -1,0 +1,127 @@
+@import './base.css';
+.category,.product{
+    background-color: white;
+    width: 25%;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgb(0,0,0,.2);
+
+}
+
+.loader-container{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    background-color: rgba(0, 0, 0, .5);
+}
+
+.active{
+    display: flex;
+}
+.loader{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 5px solid #000;
+    border-bottom-color: transparent;
+animation: rotate 1s infinite linear;
+}
+@keyframes rotate{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+
+.header{
+    background-color:rgba(255, 255, 255, .8);
+    padding: 20px;
+    position: sticky;
+    top: 0;
+}
+
+.header .logo{
+    display: flex;
+   
+    align-items: center;
+    gap: 5px;
+    flex-wrap: wrap;
+}
+.header .logo img{
+    width: 35px;
+}
+.header .logo a{
+    color: var(--maincolor);
+
+
+}
+.navbar ul{
+    display: flex;
+   
+    gap: 10px;
+    flex-wrap: wrap;
+}
+.navbar ul li a{
+    color:#101928;
+
+
+}
+
+.scrollnavbar{
+    background-color: blue;
+}
+
+
+
+
+
+
+
+
+    .pagination-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pagination {
+    list-style: none;
+    display: flex;
+}
+
+.page-item {
+    margin: 0 5px;
+}
+
+.page-link {
+    display: block;
+    padding: 10px 15px;
+    color: #007bff;
+    text-decoration: none;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.page-link:hover {
+    background-color: #007bff;
+    color: #fff;
+    border-color: #007bff;
+}
+
+.page-item.active .page-link {
+    background-color: #007bff;
+    color: #fff;
+    border-color: #007bff;
+}
+
+.page-item.disabled .page-link {
+    color: #ccc;
+    cursor: not-allowed;
+    border-color: #ddd;
+}
